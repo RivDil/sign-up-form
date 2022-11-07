@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(238, 236, 236);
+}
+#main--left{
+    width: 40%;
+    height: 100%;
+}
+#main--right{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto 0;
+}
+
+#main--left__imgContainer{
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/trees.jpg');
+    background-position: right bottom;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+#main--right__form{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 30px;
+        
+}
+
+#main--right__headlines{
+    padding: 30px;
+}
+#main--right__text{
+    font-family: sans-serif;
+    font-weight:700;
+    font-size:1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+}
+#main--right__title{
+        font-family: sans-serif;
+    font-weight:700;
+    font-size:1.2rem;
+}
+#form--title{
+    margin-bottom: 15px;
+}
+
+#signUp{
+    display: flex;
+}
+
+#signUp > div{
+    display: flex;
+    row-gap: 18px;
+    flex-direction: column ;
+    width: 27%;
+}
+
+#form--right{
+    margin-left: 50px;
+}
+
+.label{
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+    font-size: 0.7rem;
+    color: black;
+    
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBar{
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    height: 28px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+.inputBar:focus{
+
+}
+
+
+
+#footer{
+    padding: 30px;
+}
+
+#footer button{
+    width: 200px;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #596D48;
+    font-size: bold;
+    color: white;
+    border: none;
+}
+
+#footer h3{
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight:light;
+}
+
+#footer h3 a{
+    text-decoration: none;
+    color: #596D48;
+
+}

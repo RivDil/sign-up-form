@@ -14,6 +14,10 @@
 <body>
     <main>
         <section id="main--left">
+            <div id="banner">
+                <img src="./assets/odin-lined.png" alt="Odin-Logo">
+                <p>ODIN</p>
+            </div>
             <div id="main--left__imgContainer"></div>
         </section>
         <section id="main--right">
@@ -36,7 +40,9 @@
                         </div>
                         <div id="password" class="inputs">
                             <label for="" class="label">PASSWORD</label>
-                            <input type="text" class="inputBar">
+                            <input type="password" class="inputBar" id="passwordBar" onkeyup="matchPassword()">
+                            <p id="validation">* passwords do not match</p>
+                            <p id="validation-length">* passwords must have more than 8 characters</p>
                         </div>
                     </div>
                     <div id="form--right">
@@ -50,7 +56,7 @@
                         </div>
                         <div id="confirmPassword" class="inputs">
                             <label for="" class="label">CONFIRM PASSWORD</label>
-                            <input type="text" class="inputBar">
+                            <input type="password" class="inputBar" id="confirmPasswordBar" onkeyup="matchPassword()">
                         </div>
 
                     </div>
@@ -63,5 +69,31 @@
             </div>
         </section>
     </main>
+    <script>
+        let password = document.getElementById('passwordBar');
+        let confirmPassword = document.getElementById('confirmPasswordBar');
+        let validationLength = document.getElementById('validation-length');
+        let validation = document.getElementById('validation');
+
+        function matchPassword(){ 
+          
+            if(password.value.length < 8 || confirmPassword.value.length < 8){
+                password.classList.add('error');
+                confirmPassword.classList.add('error');
+                validationLength.style.display = 'block';
+
+            }else if (password.value !== confirmPassword.value){
+                password.classList.add('error');
+                confirmPassword.classList.add('error');
+                validation.style.display = 'block';
+            }else{
+                password.classList.remove('error');
+                confirmPassword.classList.remove('error');
+                validationLength.style.display = 'none';
+                validation.style.display = 'none';
+            }
+        }
+
+    </script>
 </body>
 </html>
